@@ -13,11 +13,20 @@ public class TestaBanco {
 //		System.out.println("Nome:"+ pessoaNumero1.getNome());
 //		System.out.println("Nome:"+ pessoaNumero1.getProfissao());
 //		System.out.println("CPF:"+ pessoaNumero1.getCpf());
+		
+		PessoaFisica pfDayane = new PessoaFisica();
+		pfDayane.setNome("Dayane");
+		pfDayane.setEmail("email@email.com");
+		pfDayane.setTelefone("999999999");
+		pfDayane.setCpf("123456789-10");
+		pfDayane.setRg("12345678-9");
+		pfDayane.setProfissao("Estudante");
+		
 		Conta conta1 = new Conta();
 		conta1.setAgencia(1234);
 		conta1.setNumeroConta(7889);
 //		conta1.setSaldo(10000);
-		conta1.setTitular("Dayane Leal");
+		conta1.setTitular(pfDayane);
 		conta1.depositar(100);
 		conta1.sacar(50);
 		System.out.println(conta1.toString());
@@ -32,6 +41,16 @@ public class TestaBanco {
 		System.out.println("Saldo Atual Conta 1:" + conta1.getSaldo());
 		System.out.println("Saldo Atual Conta 2:" + conta2.getSaldo());
 //		System.out.println("Titular:" + conta1.getTitular());
+		
+		ContaCorrente cc1 = new ContaCorrente();
+		cc1.depositar(1000);
+		System.out.println("Saldo: " + cc1.getSaldo());
+		System.out.println("Limite: " +cc1.getLimite());
+		System.out.println("Saldo com limite: " +cc1.getSaldoComLimite());
+		cc1.sacar(1500);
+		System.out.println("Saldo: " + cc1.getSaldo());
+		System.out.println("Limite: " +cc1.getLimite());
+		System.out.println("Saldo com limite: " +cc1.getSaldoComLimite());
 	}
 	
 	

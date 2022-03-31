@@ -6,7 +6,9 @@ public class PessoaFisica extends PessoaHeranca {
 		private String rg;
 		private String profissao;
 		
-		
+		public PessoaFisica() {
+			
+		}
 		
 		public PessoaFisica(String cpf, String rg, String profissao) {
 			super();
